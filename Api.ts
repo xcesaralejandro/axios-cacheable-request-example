@@ -14,7 +14,7 @@ const axiosInstance = axios.create({
       'Accept': 'application/json',
       'Content-Type': 'application/json; charset=UTF-8',
     },
-    validateStatus: () => { return false; },
+    validateStatus: () => { return true; },
 }) as AxiosApi;
 axiosInstance.interceptors.request.use(
   config => {
